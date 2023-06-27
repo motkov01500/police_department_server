@@ -11,7 +11,7 @@ CREATE TABLE role(
 CREATE TABLE user(
     id INT NOT NULL AUTO_INCREMENT,
     username VARCHAR(30) NOT NULL,
-    password VARCHAR(50) NOT NULL,
+    password VARCHAR(200) NOT NULL,
     email VARCHAR(70) NOT NULL,
     role_id INT,
     PRIMARY KEY(id)
@@ -20,7 +20,7 @@ CREATE TABLE user(
 CREATE TABLE car(
     id INT NOT NULL AUTO_INCREMENT,
     car_number VARCHAR(10) NOT NULL,
-    insurance_end_date DATETIME,
+    insurance_end_date DATE,
     model VARCHAR(15) NOT NULL,
     year_of_manufacture DATE NOT NULL,
     user_id INT NOT NULL,
@@ -45,7 +45,7 @@ CREATE TABLE policeman_about(
 );
 
 CREATE TABLE violation(
-    id CHAR(30) NOT NULL DEFAULT(UUID()),
+    id CHAR(50) NOT NULL DEFAULT(UUID()),
     type ENUM("electronic slip", "penal decree"),
     cause VARCHAR(200) NOT NULL,
     is_handed_to_driver BOOLEAN,
@@ -59,8 +59,8 @@ CREATE TABLE driving_license(
     license_number INT NOT NULL,
     points INT NOT NULL,
     address VARCHAR(150),
-    date_of_creation DATETIME,
-    expiry_date DATETIME,
+    date_of_creation DATE,
+    expiry_date DATE,
     is_verified BOOLEAN,
     pin VARCHAR(10) NOT NULL,
     user_id INT NOT NULL,
