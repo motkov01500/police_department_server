@@ -46,7 +46,7 @@ CREATE TABLE policeman_about(
 
 CREATE TABLE violation(
     id CHAR(50) NOT NULL DEFAULT(UUID()),
-    type ENUM("electronic slip", "penal decree"),
+    type ENUM("electronic_slip", "penal_decree"),
     cause VARCHAR(200) NOT NULL,
     is_handed_to_driver BOOLEAN,
     policeman_about_id INT,

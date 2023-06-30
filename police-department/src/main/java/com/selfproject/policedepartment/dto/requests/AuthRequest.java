@@ -1,4 +1,4 @@
-package com.selfproject.policedepartment.dto.auth;
+package com.selfproject.policedepartment.dto.requests;
 
 public class AuthRequest {
 

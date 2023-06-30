@@ -12,11 +12,12 @@ import lombok.Setter;
 public class Violation {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.UUID)
     @Column(nullable = false)
-    private int id;
+    private String id;
 
     @Column(name = "type")
+    @Enumerated(EnumType.STRING)
     private ViolationTypeEnum violationType;
 
     @Column(nullable = false)

@@ -13,4 +13,7 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 
     @Query("FROM User U WHERE U.username = :username")
     Optional<User> findByUsername(@Param("username") String username);
+
+    @Query("From User U LEFT JOIN U.drivingLicense DR WHERE DR.pin = :pin")
+    Optional<User> findByPIN(@Param("pin") String pin);
 }

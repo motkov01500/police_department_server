@@ -44,13 +44,13 @@ INSERT INTO policeman_about(first_name, last_name, department, user_id)
 VALUES("Hristo", "Georgiev", "Lovech", 3);
 
 INSERT INTO violation(type, cause, is_handed_to_driver, policeman_about_id, user_id)
-VALUES('electronic slip', 'high speed', 0, 1, 4);
+VALUES('electronic_slip', 'high speed', 0, 1, 4);
 INSERT INTO violation(type, cause, is_handed_to_driver, policeman_about_id, user_id)
-VALUES('electronic slip', 'high speed', 1, 1, 4);
+VALUES('electronic_slip', 'high speed', 1, 1, 4);
 INSERT INTO violation(type, cause, is_handed_to_driver, policeman_about_id, user_id)
-VALUES('electronic slip', 'turn off headlights', 1, 2, 5);
+VALUES('electronic_slip', 'turn off headlights', 1, 2, 5);
 INSERT INTO violation(type, cause, is_handed_to_driver, policeman_about_id, user_id)
-VALUES('penal decree', 'without a belt', 1, 2, 5);
+VALUES('penal_decree', 'without a belt', 1, 2, 5);
 
 INSERT INTO driving_license(license_number, points, address, date_of_creation, expiry_date, is_verified, pin, user_id)
 VALUES(95315723, 30, '524 Cummings Groves Apt. 507, Lake Brandyport', '2022-05-10', '2027-05-10', 0, '0103154929', 2);

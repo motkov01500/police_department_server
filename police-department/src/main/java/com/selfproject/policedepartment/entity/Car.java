@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 public class Car {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false)
     private int id;
 
@@ -22,7 +22,7 @@ public class Car {
     private String carNumber;
 
     @Column(name = "insurance_end_date")
-    private LocalDateTime insuranceEndDate;
+    private LocalDate insuranceEndDate;
 
     @Column(nullable = false)
     private String model;

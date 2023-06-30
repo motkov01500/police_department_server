@@ -11,7 +11,7 @@ import lombok.Setter;
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false)
     private int id;
 
@@ -27,4 +27,7 @@ public class User {
     @ManyToOne(targetEntity = Role.class)
     @JoinColumn(name = "role_id")
     private Role role;
+
+    @OneToOne(mappedBy = "user")
+    private DrivingLicense drivingLicense;
 }

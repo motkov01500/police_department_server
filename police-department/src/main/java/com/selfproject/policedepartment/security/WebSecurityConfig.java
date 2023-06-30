@@ -35,8 +35,15 @@ public class WebSecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
                 .authorizeHttpRequests(authorizeHttpRequests -> authorizeHttpRequests
-                                .requestMatchers("user/get-user").hasAnyAuthority("ADMIN")
-                                .requestMatchers("/swagger-ui.html","/swagger-ui/**","/v3/api-docs/**","/user/login").permitAll()
+                                .requestMatchers("car/get-car-by-number-pin").hasAnyAuthority("USER", "ADMIN")
+                                .requestMatchers("user/get-all").hasAuthority("ADMIN")
+                                .requestMatchers("violation/get-violation-by-id-pin" , "car/get-current-user-cars"
+                                        ,"driving-license/create-driving-license","car/create-car").hasAnyAuthority("ADMIN", "POLICEMAN", "USER")
+                                .requestMatchers("violation/get-electronic-slips-by-pin", "violation/get-by-pin",
+                                        "violation/get-not-handed-to-driver-by-pin", "car/get-cars-by-pin", "violation/get-all-by-pin",
+                                        "/driving-license/get-not-verified", "/driving-license/verify-by-id").hasAnyAuthority("POLICEMAN", "ADMIN")
+                                .requestMatchers("/violation/create-violation","/violation/get-penal-decrees-by-pin").hasAuthority("POLICEMAN")
+                                .requestMatchers("/swagger-ui.html","/swagger-ui/**","/v3/api-docs/**","/auth/login","/auth/register").permitAll()
                                 .anyRequest().authenticated()
                         )
                 .addFilterBefore(tokenAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
