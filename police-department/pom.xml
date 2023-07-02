@@ -51,6 +51,11 @@
             <artifactId>mysql-connector-j</artifactId>
             <scope>runtime</scope>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
 
         <!--Mapping-->
         <dependency>
@@ -64,9 +69,9 @@
             <version>${mapstruct.version}</version>
         </dependency>
         <dependency>
-        <groupId>org.projectlombok</groupId>
-        <artifactId>lombok-mapstruct-binding</artifactId>
-        <version>${mapstruct-lombok-binding.version}</version>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok-mapstruct-binding</artifactId>
+            <version>${mapstruct-lombok-binding.version}</version>
         </dependency>
 
         <!-- JWT -->
@@ -86,11 +91,6 @@
             <artifactId>jjwt-jackson</artifactId>
             <version>${jjwt.version}</version>
             <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
         </dependency>
 
         <!--Testing-->

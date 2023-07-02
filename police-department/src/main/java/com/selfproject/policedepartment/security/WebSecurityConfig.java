@@ -38,7 +38,8 @@ public class WebSecurityConfig {
                                 .requestMatchers("car/get-car-by-number-pin").hasAnyAuthority("USER", "ADMIN")
                                 .requestMatchers("user/get-all").hasAuthority("ADMIN")
                                 .requestMatchers("violation/get-violation-by-id-pin" , "car/get-current-user-cars"
-                                        ,"driving-license/create-driving-license","car/create-car").hasAnyAuthority("ADMIN", "POLICEMAN", "USER")
+                                        ,"driving-license/create-driving-license", "vignette/create-vignette"
+                                        ,"car/create-car","vignette/get-vignette-by-carnum-pin").hasAnyAuthority("ADMIN", "POLICEMAN", "USER")
                                 .requestMatchers("violation/get-electronic-slips-by-pin", "violation/get-by-pin",
                                         "violation/get-not-handed-to-driver-by-pin", "car/get-cars-by-pin", "violation/get-all-by-pin",
                                         "/driving-license/get-not-verified", "/driving-license/verify-by-id").hasAnyAuthority("POLICEMAN", "ADMIN")

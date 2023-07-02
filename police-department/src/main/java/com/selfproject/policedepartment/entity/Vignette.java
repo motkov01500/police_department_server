@@ -21,6 +21,8 @@ public class Vignette {
     @Column(name = "expiry_date", nullable = false)
     private LocalDate expiryDate;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "type")
     private VignetteTypeEnum vignetteType;
 
     @ManyToOne(targetEntity = Car.class)
