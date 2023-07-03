@@ -6,15 +6,15 @@ INSERT INTO role(name)
 VALUES('ADMIN');
 
 INSERT INTO user(username, password, email, role_id)
-VALUES('admin','admin','admin@gmail.com',3);
+VALUES('admin','$2a$12$gVoXRjPxhudNj3fQpC3UF.w03q/8dPuGnUytejcIj2speOI9ZrO76','admin@gmail.com',3);
 INSERT INTO user(username, password, email, role_id)
-VALUES('vankataI','vankatapass','ivanivanov@gmail.com',2);
+VALUES('vankataI','$2a$12$gVoXRjPxhudNj3fQpC3UF.w03q/8dPuGnUytejcIj2speOI9ZrO76','ivanivanov@gmail.com',2);
 INSERT INTO user(username, password, email, role_id)
-VALUES('hristoKrot','hristopass','hristooo@gmail.com',2);
+VALUES('hristoKrot','$2a$12$ZrvIsL2D5S6NKXvQO8vBFe./iKdryFLKV1Mz0N3hJug8p4zwNfFaW','hristooo@gmail.com',2);
 INSERT INTO user(username, password, email, role_id)
-VALUES('georgiGv','geogivi123','georgiVT@gmail.com',1);
+VALUES('georgiGv','$2a$12$ZrvIsL2D5S6NKXvQO8vBFe./iKdryFLKV1Mz0N3hJug8p4zwNfFaW','georgiVT@gmail.com',1);
 INSERT INTO user(username, password, email, role_id)
-VALUES('liubakapower','liubakaPass','liuboslavAD@gmail.com',1);
+VALUES('liubakapower','$2a$12$ZrvIsL2D5S6NKXvQO8vBFe./iKdryFLKV1Mz0N3hJug8p4zwNfFaW','liuboslavAD@gmail.com',1);
 
 INSERT INTO car(car_number, insurance_end_date, model, year_of_manufacture, user_id)
 VALUES('8DHL240', '2023-08-20', 'Hyundai', '2005-05-05',2);
